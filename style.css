@@ -29,8 +29,10 @@ body            {font-family: sandoll-gothicneo1, sans-serif; line-height: 170%;
                  background-color: #EDEDED;
                 }
 
-h3              {font-size: 3rem; font-weight: 200; line-height: 150%; margin: 0;}
-h4              {font-size: 2rem; font-weight: 300; line-height: 150%; margin: 0;}
+h2              {font-size: 3rem; font-weight: 300; line-height: 150%; margin: 0;}
+h3              {font-size: 2.7rem; font-weight: 200; line-height: 150%; margin: 0;}
+h4              {font-size: 1.8rem; font-weight: 300; line-height: 150%; margin: 0;}
+
 
 .container      {display: grid;
                  grid-template-areas:" main   main "
@@ -107,6 +109,12 @@ input           {width: calc(100% - 200px);
                  background-color: white; border-radius:50vh;
                 }
 
+.more           {width: 70px; height: 70px;
+                 display: flex; gap: 10px; justify-content: center; align-items: center;
+                }
+.round          {width: 1rem; height: 1rem; border-radius: 50%; background-color: #8A8A8A;}
+                
+
 /* 방명록 끝 */
 
 
@@ -135,7 +143,7 @@ input           {width: calc(100% - 200px);
 
 /* 초록 영역 */
 .green-section {width: 100vw; height: calc(95vh - 210px);
-                 background-color: #B9DCB7;
+                 background-color: #EDEDED;
                 }
 .left-109       {margin-left: 10rem;}
 .img-move       {display: flex; justify-content: space-between; padding-left: 3rem; padding-right: 3rem;}
@@ -144,24 +152,31 @@ input           {width: calc(100% - 200px);
 .book1          {width: 45vw; object-fit: contain; margin-left: 27.5vw; margin-right: 27.5vw;}
 .book2          {width: 45vw; object-fit: contain; margin-left: 27.5vw; margin-right: 27.5vw;}
 .book3          {width: 45vw; object-fit: contain; margin-left: 27.5vw; margin-right: 27.5vw;}
-.round          {width: 1rem; height: 1rem; color: #8A8A8A;}
 
 /* 분홍 영역 */
 .pink-section   {width: 100vw; padding-bottom: 35rem;
                  background-color: #FF8BF6; color: white;
                 }
-.letter-exp     {height: calc(95vh - 210px);
+.letter-exp     {
                  padding-left: 100px; padding-right: 100px; padding-bottom: 30rem;
-                 display: flex; justify-content: center;
+                 display: flex; justify-content: flex-start; flex-wrap: wrap;
                  width: calc(100vw - 20rem);
                 }
 .letter-exp-block{padding: 10rem 0rem;
                  display: flex; flex-direction: column;
                  justify-content: space-between;
                 }
-.card           {display: flex; gap: 1.5rem; margin: 5rem;}
+.cards          {display: flex; gap: 1.5rem; margin: 5rem; height: 100%;}
+.flip           {position: relative; perspective: 1100px; width: 12.5vw;}
+.card           {position: relative; transition: .4s; transform-style: preserve-3d; width: 12.5vw; height: 19.2vw;}
 .card-up        {padding-bottom: 80px; object-fit: contain; width: 12.5vw;}
 .card-down      {padding-top: 80px; object-fit: contain; width: 12.5vw;}
+.front, .back   {position: absolute; backface-visibility: hidden;}
+.back           {transform: rotateY(180deg);}
+.flip:hover .card  {transform: rotateY(180deg);}
+
+/*height: calc(95vh - 210px);
+*/
 .exp            {display: flex; flex-direction: column; gap: 3rem; color: black; padding-top: 3rem; margin: 5rem;}
 
 
