@@ -16,7 +16,6 @@
       h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
   </script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <!-- body start -->
@@ -33,6 +32,14 @@
   </form>
   <div class="guest-area">
     <div class="guest">
+      <div class="stem"></div>
+      <div class="leaf">
+        <a class="more" href="guest.html">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+        </a>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -80,15 +87,15 @@
         <div class="right-leaf">
           <img src="./basic/leafmark.svg" alt="잎" loading="lazy">
         </div>
+        <div class="more">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+        </div>
         <div class="book">
           <img class="book1" src="./basic/book1.png" alt="book1" loading="lazy">
           <img class="book2" src="./basic/book2.png" alt="book2" loading="lazy">
           <img class="book3" src="./basic/book3.png" alt="book3" loading="lazy">
-        </div>
-        <div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
         </div>
       </div>
       <!-- ? -->
@@ -104,12 +111,22 @@
             다양성을 함께 만나보세요.<br>
           </h4>
         </div>
-        <!-- ㄱ, ㅝ, ㄲ, ㅓ, ㄴ, ㅔ -->
         <div class="letter-exp">
+        <!-- ㄱ, ㅝ, ㄲ, ㅓ, ㄴ, ㅔ -->
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/g.png" alt="g-card" loading="lazy">
-              <img class="card-down" src="./card/wo.png" alt="wo-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/g.png" alt="g-card" loading="lazy">
+                  <img class="card-up back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/wo.png" alt="wo-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback1.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>김채영<br>Kim Chaeyoung</h3>
@@ -120,12 +137,22 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/kk.png" alt="kk-card" loading="lazy">
-              <img class="card-up" src="./card/eo.png" alt="eo-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/kk.png" alt="kk-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/eo.png" alt="eo-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>김민지<br>Kim Min-ji</h3>
+              <h3>김민지<br>Kim Minji</h3>
               <h4>
                 깍지 낀 손을 모티프로, 손끼리 맞잡은 형태를<br>
                 살려 만들었습니다.<br>
@@ -133,12 +160,22 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/n.png" alt="n-card" loading="lazy">
-              <img class="card-down" src="./card/e.png" alt="e-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/n.png" alt="n-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/e.png" alt="e-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback2.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>윤주향<br>Yoon Ju-hyang</h3>
+              <h3>윤주향<br>Yoon Juhyang</h3>
               <h4>
                 나비의 구조적 형태와 곡선적 움직임을 모티프로<br>
                 작업했습니다. 나비가 날아오를 때의 동선과 역동감을<br>
@@ -146,13 +183,21 @@
               </h4>
             </div>
           </div>
-        </div>
         <!-- ㄷ, ㅠ, ㄸ, ㅖ, ㄹ, ㅢ -->
-        <div class="letter-exp">
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/d.png" alt="d-card" loading="lazy">
-              <img class="card-up" src="./card/yu.png" alt="yu-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/d.png" alt="d-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/yu.png" alt="yu-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>장서진<br>Jang Seojin</h3>
@@ -163,9 +208,19 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/tt.png" alt="ng-card" loading="lazy">
-              <img class="card-down" src="./card/ye.png" alt="yae-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/tt.png" alt="ttt-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/ye.png" alt="ye-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback2.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>김한슬<br>Kim Hanseul</h3>
@@ -176,28 +231,46 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/r.png" alt="r-card" loading="lazy">
-              <img class="card-up" src="./card/ui.png" alt="ui-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/r.png" alt="r-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/ui.png" alt="ui-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>김유민<br>Kim Yu-min</h3>
+              <h3>김유민<br>Kim Yumin</h3>
               <h4>
                 털실 뭉치의 울퉁불퉁한 표면 질감을 글자의<br>
                 형태에 적용했습니다.<br>
               </h4>
             </div>
           </div>
-        </div>
-        <!-- ㅁ, ㅘ, ㅂ, ㅙ, ㅃ, ㅏ -->
-        <div class="letter-exp">
+        <!-- ㅁ, ㅘ, ㅂ, ㅙ, ㅎ -->
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/m.png" alt="m-card" loading="lazy">
-              <img class="card-down" src="./card/wa.png" alt="wa-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/m.png" alt="m-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/wa.png" alt="wa-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback2.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>강유림<br>Kang Yu-rim</h3>
+              <h3>강유림<br>Kang Yurim</h3>
               <h4>
                 모자의 실루엣을 모티프로 작업했습니다. 모자를<br>
                 구성하는 두꺼운 크라운(머리) 부분과 얇은 창의 형상을<br>
@@ -206,9 +279,25 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/b.png" alt="b-card" loading="lazy">
-              <img class="card-up" src="./card/wae.png" alt="wae-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/b.png" alt="b-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/wae.png" alt="wae-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback1.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/h.png" alt="h-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>김민채<br>Kim Minchae</h3>
@@ -220,10 +309,27 @@
               </h4>
             </div>
           </div>
+      <!-- ㅃ, ㅏ, ㅚ, ㅅ, ㅛ, ㅐ -->
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/pp.png" alt="pp-card" loading="lazy">
-              <img class="card-down" src="./card/a.png" alt="a-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/pp.png" alt="pp-card" loading="lazy">
+                  <img class="card-up back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/a.png" alt="a-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/oe.png" alt="oe-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback0.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>손다현<br>Son Dahyun</h3>
@@ -233,39 +339,49 @@
               </h4>
             </div>
           </div>
-        </div>
-        <!-- ㅅ, ㅛ, ㅆ, ㅑ, ㅇ, ㅒ -->
-        <div class="letter-exp">
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/m.png" alt="m-card" loading="lazy">
-              <img class="card-down" src="./card/wa.png" alt="wa-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/s.png" alt="s-card" loading="lazy">
+                  <img class="card-up back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/yo.png" alt="yo-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback1.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/ae.png" alt="ae-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback4.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>강유림<br>Kang Yu-rim</h3>
+              <h3>이종희<br>Lee Jonghee</h3>
               <h4>
-                모자의 실루엣을 모티프로 작업했습니다. 모자를<br>
-                구성하는 두꺼운 크라운(머리) 부분과 얇은 창의 형상을<br>
-                이용하여 강한 획의 대비를 주고자 하였습니다.<br>
+                솜이 지닌 보송송한 감촉을 모티프로 하였습니다.
               </h4>
             </div>
           </div>
+        <!-- ㅆ, ㅑ, ㅜ, ㅇ, ㅐ -->
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/ss.png" alt="ss-card" loading="lazy">
-              <img class="card-up" src="./card/ya.png" alt="ya-card" loading="lazy">
-            </div>
-            <div class="exp">
-              <h3>윤보녕<br>Yoon Bo</h3>
-              <h4>
-                <br>
-              </h4>
-            </div>
-          </div>
-          <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/ng.png" alt="ng-card" loading="lazy">
-              <img class="card-up" src="./card/yae.png" alt="yae-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/ng.png" alt="ng-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/yae.png" alt="yae-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback4.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>김채영<br>Kim Chaeyoung</h3>
@@ -274,16 +390,54 @@
               </h4>
             </div>
           </div>
-        </div>
-        <!-- ㅈ, ㅞ, ㅉ, ㅟ, ㅊ, ㅕ -->
-        <div class="letter-exp">
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/j.png" alt="j-card" loading="lazy">
-              <img class="card-up" src="./card/we.png" alt="we-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/ss.png" alt="ss-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/ya.png" alt="ya-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/u.png" alt="u-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback0.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>김민지<br>Kim Min-ji</h3>
+              <h3>윤보녕<br>Yoon Bonyeong</h3>
+              <h4>
+                쌀알의 형태를 모티프로 작업했습니다.<br>
+                쌀알 특유의 파임과 부드러운 듯 각진 곡선들의<br>
+                조화를 각 자모음의 형태에 접목하고자 하였습니다.
+              </h4>
+            </div>
+          </div>
+        <!-- ㅈ, ㅞ, ㅉ, ㅟ, ㅊ, ㅕ -->
+          <div class="letter-exp-block">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/j.png" alt="j-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/we.png" alt="we-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="exp">
+              <h3>김민지<br>Kim Minji</h3>
               <h4>
                 잔꽃이 피어 있는 작고 귀여운 형태감을 모티프로<br>
                 작업했습니다.<br>
@@ -291,24 +445,44 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/jj.png" alt="jj-card" loading="lazy">
-              <img class="card-down" src="./card/wi.png" alt="wi-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/jj.png" alt="jj-card" loading="lazy">
+                  <img class="card-up back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/wi.png" alt="wi-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback4.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>윤주향<br>Yoon Ju-hyang</h3>
+              <h3>윤주향<br>Yoon Juhyang</h3>
               <h4>
-                쪽지를 접을 때 발생하는 종이 특유의 각도와 형태를<br>
-                모티브로 하였습니다. 획이 많이 뭉치는 부분에는<br>
-                잉크트랩(Ink Trap)을 넣어 글자가 분명히 인식되도록<br>
-                했습니다.
+                쪽지를 접을 때 발생하는 종이 특유의 각도와<br>
+                형태를 모티브로 하였습니다. 획이 많이 뭉치는<br>
+                부분에는 잉크트랩(Ink Trap)을 넣어 글자가
+                분명히 인식되도록 했습니다.
               </h4>
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/ch.png" alt="ch-card" loading="lazy">
-              <img class="card-up" src="./card/yeo.png" alt="yao-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/ch.png" alt="ch-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/yeo.png" alt="yeo-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback5.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>장서진<br>Jang Seojin</h3>
@@ -318,13 +492,21 @@
               </h4>
             </div>
           </div>
-        </div>
         <!-- ㅋ, ㅡ, ㅌ, ㅗ, ㅍ, ㅣ -->
-        <div class="letter-exp">
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/k.png" alt="k-card" loading="lazy">
-              <img class="card-up" src="./card/eu.png" alt="eu-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/k.png" alt="k-card" loading="lazy">
+                  <img class="card-down back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/eu.png" alt="eu-card" loading="lazy">
+                  <img class="card-up back" src="./card/greenback4.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
               <h3>김한슬<br>Kim Hanseul</h3>
@@ -336,12 +518,22 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-up" src="./card/t.png" alt="t-card" loading="lazy">
-              <img class="card-down" src="./card/o.png" alt="o-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/t.png" alt="t-card" loading="lazy">
+                  <img class="card-up back" src="./card/yellowback2.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/o.png" alt="o-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback5.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>김유민<br>Kim Yu-min</h3>
+              <h3>김유민<br>Kim Yumin</h3>
               <h4>
                 털실 뭉치의 울퉁불퉁한 표면 질감을 글자의 형태에<br>
                 적용했습니다.<br>
@@ -349,12 +541,22 @@
             </div>
           </div>
           <div class="letter-exp-block">
-            <div class="card">
-              <img class="card-down" src="./card/p.png" alt="p-card" loading="lazy">
-              <img class="card-up" src="./card/i.png" alt="i-card" loading="lazy">
+            <div class="cards">
+              <div class="flip">
+                <div class="card">
+                  <img class="card-up front" src="./card/p.png" alt="p-card" loading="lazy">
+                  <img class="card-up back" src="./card/yellowback1.png" alt="consonant-card" loading="lazy">
+                </div>
+              </div>
+              <div class="flip">
+                <div class="card">
+                  <img class="card-down front" src="./card/i.png" alt="i-card" loading="lazy">
+                  <img class="card-down back" src="./card/greenback3.png" alt="vowels-card" loading="lazy">
+                </div>
+              </div>
             </div>
             <div class="exp">
-              <h3>강유림<br>Kang Yu-rim</h3>
+              <h3>강유림<br>Kang Yurim</h3>
               <h4>
                 파도의 유동적이며 거센 물결을 모티프로 둥근 곡선을<br>
                 이용하여 너울을 나타내고자 하였습니다.
