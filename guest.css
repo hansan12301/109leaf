@@ -1,0 +1,121 @@
+/*  컬러 리스트
+        1. RGB(web) IP GREEN    #B9DCB7
+        2. RGB(web) IN YELLOW   #FFF68C
+        3. RGB(web) CHEON PINK  #FF90F3
+        4. RGB(web) JI BLUE     #1F469A
+    흑백 리스트
+        1. MONO 1               #000000 black
+        2. MONO 2               #EDEDED
+        3. MONO 3               #8A8A8A
+        4. MONO 4               #ffffff white
+*/
+/*  폰트 font-family: sandoll-gothicneo1, sans-serif;
+    굵기 100 200 300
+*/
+
+
+
+
+
+/* 기본 css 구조 */
+
+
+html            {font-size: 10px;}
+
+.font300        {font-weight: 300; font-size: 3rem;}
+
+body            {font-family: sandoll-gothicneo1, sans-serif; line-height: 170%;
+                 margin: 0;
+                 background-color: #EDEDED;
+                }
+
+h2              {font-size: 3rem; font-weight: 300; line-height: 150%; margin: 0;}
+h3              {font-size: 2.7rem; font-weight: 200; line-height: 150%; margin: 0;}
+h4              {font-size: 1.8rem; font-weight: 300; line-height: 150%; margin: 0;}
+
+
+.container      {display: grid;
+                 grid-template-areas:" main   main "
+                                     "   .     .   "
+                                     "footer footer";
+                }
+
+.about          {padding-top: 3rem; padding-left: calc(100vw / 7); padding-right: 100px;
+                 display: flex; flex-direction: row;
+                 justify-content: space-between;
+                }
+.title          {display: flex; flex-direction: column;}
+
+
+
+
+
+/* 방명록 시작 */
+
+/* 입력창 */
+.input          {position: fixed; top: 0; left: 0;
+                 width: calc(100% - 80px); height: 5%;
+                 padding: 20px 40px 10px;
+
+                 display: flex; flex-direction: row;
+                 justify-content: space-between;
+                 align-items: center; align-content: flex-start;
+
+                 background-color: #EDEDED; color: #FF8BF6;
+                 z-index: 2;
+                }
+/* 방명록 입력 */
+input           {width: calc(100% - 200px);
+                 background-color: transparent; color: #8A8A8A;
+                 border-top: none; border-left: none; border-right: none; border-width: 2px;
+                 outline: none;
+                 padding: 1rem;
+                }
+/* 방명록 제출 */
+.submit         {border: 0; width: 70px;
+                 outline: none; text-decoration: none;
+                }
+
+
+/* 방명록 리스트 */
+.guest-area     {grid-area: guest;
+                 position: absolute; top: calc(5vh + 30px);
+
+                 padding: 10px 0px 50px;
+
+                 display: flex;
+                 align-items: center;
+
+                 background-color: #EDEDED; color: white;
+                 z-index: 2;
+                }
+
+.guest          {display: flex; flex-wrap: wrap; gap: 2rem;
+                 align-items: center;
+                 overflow-y: hidden;
+                }
+
+/* 목록 구조(stem - 줄기 / leaf - 잎) */
+.stem           {width: 35px; height: 15px; padding-left: 1rem; margin-right: -3rem;
+                 background-color: white;
+                }
+.leaf           {height: 70px; 
+                 margin-left: -5px; margin-right: 15px;
+                 padding: 40px; 
+
+                 display: inline-flex; 
+                 align-items: center; gap: 15px;
+
+                 background-color: white; border-radius:50vh;
+                }
+
+.more           {width: 70px; height: 70px;
+                 display: flex; gap: 10px; justify-content: center; align-items: center;
+                }
+.round          {width: 1rem; height: 1rem; border-radius: 50%; background-color: #8A8A8A;}
+                
+
+/* 방명록 끝 */
+
+
+
