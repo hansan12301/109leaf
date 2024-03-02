@@ -224,3 +224,76 @@ function disassemble(hangul) {
         hangul_mid[mid_index]
     ];
 }
+
+
+
+const greenSection = document.querySelector('.green-section');
+const pageList = document.querySelector('.page-list');
+const pages = document.querySelectorAll('.page');
+
+const pageNum = document.querySelector('#page-num')
+console.log(pageNum.childNodes)
+
+let currentIndex = 0; // 현재 슬라이드 화면 인덱스
+
+pages.forEach((page) => {
+  page.style.width = `${greenSection.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+})
+
+pageList.style.width = `${greenSection.clientWidth * pages.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+/*
+    버튼에 이벤트 등록하기
+*/
+const buttonLeft = document.querySelector('.left-button');
+const buttonRight = document.querySelector('.right-button');
+
+buttonLeft.addEventListener('click', () => {
+    console.log("left clicked");
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = pages.length - 1; // 인덱스가 첫 번째 페이지보다 작으면 마지막 페이지로 설정
+    }
+    pageList.style.marginLeft = `-${greenSection.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+    clearInterval(interval); // 기존 동작되던 interval 제거
+    interval = getInterval();
+    updatePageIndicator(currentIndex);
+});
+
+buttonRight.addEventListener('click', () => {
+    console.log("right");
+    currentIndex++;
+    if (currentIndex >= pages.length) {
+        currentIndex = 0; // 인덱스가 마지막 페이지를 넘어가면 첫 번째 페이지로 설정
+    }
+    pageList.style.marginLeft = `-${greenSection.clientWidth * currentIndex}px`;
+    clearInterval(interval); // 기존 동작되던 interval 제거
+    interval = getInterval();
+    updatePageIndicator(currentIndex);
+});
+
+
+const updatePageIndicator = (index) => {
+    const pageDots = document.querySelectorAll('#page-num > .round-un, #page-num > .round-selected');
+    if (index >= 0 && index < pageDots.length) {
+        pageDots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.replace('round-un', 'round-selected');
+            } else {
+                dot.classList.replace('round-selected', 'round-un');
+            }
+        });
+    } else {
+        console.error(`Invalid index: ${index}`);
+    }
+};
+const getInterval = () => {
+    return setInterval(() => {
+        currentIndex++;
+        currentIndex = currentIndex >= pages.length ? 0 : currentIndex;
+        pageList.style.marginLeft = `-${greenSection.clientWidth * currentIndex}px`;
+        updatePageIndicator(currentIndex);
+    }, 4000);
+};
+
+let interval = getInterval(); // interval 등록
