@@ -3,6 +3,16 @@ window.onload = function() {
     loadComments();
 }
 
+// 화면 크기 변경시 새로고침
+var delay = 300;
+var timer = null; 
+$(window).on('resize', function(){
+	clearTimeout(timer);
+	timer = setTimeout(function(){
+	document.location.reload();
+	}, delay);
+});
+
 // 입력하기 버튼 클릭시 함수 호출
 const addButton = document.querySelector('#add-button');
 addButton.addEventListener('click', () => {
