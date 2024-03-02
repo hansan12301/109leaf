@@ -1,6 +1,4 @@
 // 새로고침시 위치 고정
-
-
 history.scrollRestoration = "auto";
 
 // 화면 실행시 기존 목록 불러오기
@@ -13,7 +11,6 @@ const addButton = document.querySelector('#add-button');
 addButton.addEventListener('click', () => {
     const input = document.querySelector('#input');
     let text = input.value.trim();
-
     if (text !== '') {
         // 입력된 문자열 특수문자, 숫자, 영문 등 한글 제외 제거
         const reg1 = /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/ ]/gim;
@@ -24,38 +21,41 @@ addButton.addEventListener('click', () => {
         text = text.replace(reg2, '');
         text = text.replace(reg3, '');
         text = text.replace(reg4, '');
+        if (text.length <= 5) {
+            // 문자열에서 필요한 부분을 없애도 빈 문자열이 아니라면
+            if (text !== '') {
+                // 입력된 문자열 분리 후 배열로 내보내기
+                const strValueSplit = text.split("");
+                console.log(strValueSplit);
+                text = ''
 
-        // 입력된 문자열 분리 후 배열로 내보내기
-        const strValueSplit = text.split("");
-        console.log(strValueSplit);
-        text = ''
+                // 배열 길이 만큼 반복문 실행
+                for (var num in strValueSplit) {
+                    // 문자 분리 후 문자열에 덧붙이기
+                    text = text + disassemble(strValueSplit[num])
+                }
 
-        // 배열 길이 만큼 반복문 실행
-        for (var num in strValueSplit) {
-            // 문자 분리 후 문자열에 덧붙이기
-            text = text + disassemble(strValueSplit[num])
+                text = text.replace(reg1, '');
+                text = text.replace(reg2, '');
+                text = text.replace(reg3, '');
+                text = text.replace(reg4, '');
+
+                // 문자열 local storage에 넣기
+                addToGuest(text);
+                localStorage.setItem(localStorage.length, text);
+            }
         }
-
-        text = text.replace(reg1, '');
-        text = text.replace(reg2, '');
-        text = text.replace(reg3, '');
-        text = text.replace(reg4, '');
-
-        // 문자열 local storage에 넣기
-
-        addToGuest(text);
-        localStorage.setItem(localStorage.length, text);
-        input.value = '';
-        input.focus();
-        console.log(text);
+    input.value = '';
+    input.focus();
+    console.log(text);
     }
 });
 
+// 저장된 데이터 가지고 오기
 function loadComments() {
     storageLength = localStorage.length
     console.log(storageLength)
-    console.log(localStorage.getItem(0));
-    for (var i = 0; i<storageLength; i++) {
+    for (var i = storageLength - 5; i<storageLength; i++) {
         addToGuest(localStorage.getItem(i));
     }
 }
@@ -84,6 +84,7 @@ function addToGuest(text) {
     guest.prepend(newListItem1);
 }
 
+// 문자열에 맞는 발음기호 찾기
 function invertLetter(letter) {
     switch(letter) {
         case 'ㄱ': return 'g';
