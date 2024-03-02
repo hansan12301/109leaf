@@ -1,6 +1,3 @@
-// 새로고침시 위치 고정
-history.scrollRestoration = "auto";
-
 // 화면 실행시 기존 목록 불러오기
 window.onload = function() {
     loadComments();
