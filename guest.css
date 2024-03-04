@@ -55,14 +55,14 @@ h4              {font-size: 1.8rem; font-weight: 300; line-height: 150%; margin:
 /* 입력창 */
 .input          {position: fixed; top: 0; left: 0;
                  width: calc(100% - 80px); height: 5%;
-                 padding: 20px 40px 10px;
+                 padding: 40px 40px 30px;
 
                  display: flex; flex-direction: row;
                  justify-content: space-between;
                  align-items: center; align-content: flex-start;
 
                  background-color: #EDEDED; color: #FF8BF6;
-                 z-index: 2;
+                 z-index: 1;
                 }
 /* 방명록 입력 */
 input           {width: calc(100% - 200px);
@@ -79,7 +79,7 @@ input           {width: calc(100% - 200px);
 
 /* 방명록 리스트 */
 .guest-area     {grid-area: guest;
-                 position: absolute; top: calc(5vh + 30px);
+                 position: absolute; top: calc(5vh + 70px);
 
                  padding: 10px 0px 50px;
 
@@ -87,7 +87,6 @@ input           {width: calc(100% - 200px);
                  align-items: center;
 
                  background-color: #EDEDED; color: white;
-                 z-index: 2;
                 }
 
 .guest          {display: flex; flex-wrap: wrap; gap: 2rem;
