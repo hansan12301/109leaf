@@ -34,6 +34,8 @@ body::-webkit-scrollbar {
                  display: none;
                 }
 
+main            {overflow-x: hidden;}
+
 h2              {font-size: 3rem; font-weight: 700; line-height: 150%; margin: 0; width: 20vw;}
 h3              {font-size: 2rem; font-weight: 700; line-height: 150%; margin: 0; width: 20vw;}
 h4              {font-size: 2rem; font-weight: 600; line-height: 150%; margin: 0; width: 30vw;}
@@ -62,7 +64,7 @@ h5              {font-size: 1.8rem; font-weight: 600; line-height: 150%; margin:
 /* 입력창 */
 .input          {position: fixed; top: 0; left: 0;
                  width: calc(100% - 80px); height: 5%;
-                 padding: 20px 40px 10px;
+                 padding: 40px 40px 20px;
 
                  display: flex; flex-direction: row;
                  justify-content: space-between;
@@ -86,9 +88,9 @@ input           {width: calc(100% - 200px);
 
 /* 방명록 리스트 */
 .guest-area     {grid-area: guest;
-                 position: sticky; top: calc(5vh + 30px);
+                 position: sticky; top: calc(5vh + 55px);
 
-                 padding: 10px 0px 50px;
+                 padding: 10px 0px 20px;
 
                  display: flex;
                  align-items: center;
@@ -100,6 +102,9 @@ input           {width: calc(100% - 200px);
 .guest          {display: flex; flex-wrap: nowrap;
                  align-items: center;
                  overflow-x: auto; overflow-y: hidden;
+                }
+.guest::-webkit-scrollbar {
+                 display: none;
                 }
 
 /* 목록 구조(stem - 줄기 / leaf - 잎) */
@@ -131,7 +136,7 @@ input           {width: calc(100% - 200px);
 /* 내용 시작 */
 
 .main           {grid-area: main;
-                 margin-top: calc(5vh + 30px);
+                 margin-top: calc(5vh + 60px);
                  width: 100vw;
                  overflow-y: scroll; overflow-x: hidden;
                 }
@@ -141,7 +146,7 @@ input           {width: calc(100% - 200px);
 .wordmark       {width: calc(100vw - 60px); padding-left: 20px;}
 
 /* 노란 영역 */
-.yellow-section  {width: 100vw; height: calc(95vh - 210px);
+.yellow-section  {width: 100vw; height: calc(95vh - 230px);
     display: flex; flex-direction: column;
     justify-content: space-between;
     background-color: #FFF68C;
@@ -149,7 +154,7 @@ input           {width: calc(100% - 200px);
 .basic-graphic  {padding-bottom: 3rem; padding-left: 30px; width: calc(100vw - 60px);}
 
 /* 초록 영역 */
-.green-section {width: 100vw; height: calc(95vh - 210px);
+.green-section {width: 100vw; height: calc(95vh - 230px);
                  background-color: #EDEDED;
                 }
 .page-list      {display: flex;
@@ -166,9 +171,9 @@ input           {width: calc(100% - 200px);
 .leaf109 > img  {
                  height: 30vh;
                 }
-.book           {display: flex; top: -60vh;position: relative; margin-left: 36vw;}
-.book-inner     {height: 65vh; object-fit: contain;}
-.more-box       {display: flex; justify-content: center; position: relative; top: -160px;}
+.book           {display: flex; top: -60vh;position: relative; margin-left: 39vw;}
+.book-inner     {height: 60vh; object-fit: contain;}
+.more-box       {display: flex; justify-content: center; position: relative; top: -130px;}
 .round-selected {width: 1rem; height: 1rem; border-radius: 50%; background-color: #8A8A8A;}
 .round-un       {width: 1rem; height: 1rem; border-radius: 50%; background-color: #FFF;}
 
