@@ -20,13 +20,18 @@
 /* 기본 css 구조 */
 
 
-html            {font-size: 10px;}
+html            {font-size: 10px;
+                 scroll-behavior: smooth;
+                }
 
 .font300        {font-weight: 300; font-size: 3rem;}
 
 body            {font-family: pretendard, sans-serif; line-height: 170%;
                  margin: 0;
                  background-color: #EDEDED;
+                }
+body::-webkit-scrollbar {
+                 display: none;
                 }
 
 h2              {font-size: 3rem; font-weight: 700; line-height: 150%; margin: 0; width: 20vw;}
