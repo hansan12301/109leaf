@@ -1,7 +1,7 @@
 // 화면 실행시 기존 목록 불러오기
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function(){
     loadComments();
-}
+});
 
 // 화면 크기 변경시 새로고침
 var delay = 300;
@@ -12,6 +12,8 @@ $(window).on('resize', function(){
 	document.location.reload();
 	}, delay);
 });
+
+const guest = document.querySelector('.guest');
 
 // 입력하기 버튼 클릭시 함수 호출
 const addButton = document.querySelector('#add-button');
@@ -48,8 +50,16 @@ addButton.addEventListener('click', () => {
                 text = text.replace(reg4, '');
 
                 // 문자열 local storage에 넣기
-                addToGuest(text);
                 localStorage.setItem(localStorage.length, text);
+
+                // 방명록 지우고 다 다시 부르기
+                var childrenCount = guest.children.length;
+                var childrenToRemove = childrenCount - 2; // 더보기를 제외하고 방명록 지우기
+
+                for (var i = 0; i < childrenToRemove; i++) {
+                    guest.removeChild(guest.firstElementChild);
+                }
+                loadComments(); // 방명록 다시 로드하기
             }
         }
     input.value = '';
@@ -69,7 +79,6 @@ function loadComments() {
 
 // 저장된 데이터 가지고 와서 img로 바꾼 뒤에 페이지에 넣기
 function addToGuest(text) {
-    const guest = document.querySelector('.guest');
     const newListItem1 = document.createElement('div');
     const newListItem2 = document.createElement('div');
     newListItem1.classList.add('stem');
