@@ -13,6 +13,12 @@ $(window).on('resize', function(){
 	}, delay);
 });
 
+// 스크롤바를 숨기는 함수
+function hideScrollbar() {
+    document.body.style.overflow = 'hidden'; // 스크롤바를 숨깁니다.
+}
+
+
 const guest = document.querySelector('.guest');
 
 // 입력하기 버튼 클릭시 함수 호출
