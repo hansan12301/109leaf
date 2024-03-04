@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./guest.css">
     <title>일공구잎</title>
     <script>
-      (function(d) {
-        var config = {
-          kitId: 'vxs1wej',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
+        (function(d) {
+            var config = {
+                kitId: 'vxs1wej',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
     </script>
 </head>
 
@@ -24,7 +24,7 @@
     <form name="agencyAddForm" action="" autocomplete="off" onsubmit="return false;">
         <div class="input">
             <a href="index.html">
-                <img src="./basic/flower.svg" alt="flower">
+                <img src="./basic/flower.svg" alt="flower" style="cursor:pointer;" title="Home">
             </a>
             <input id="input" class="font300" type="text" name="guest-message" placeholder="5글자 이하로 방명록 작성하기">
             <button id="add-button" class="submit">
