@@ -39,7 +39,7 @@ main            {overflow-x: hidden;}
 h2              {font-size: 3rem; font-weight: 700; line-height: 150%; margin: 0; width: 20vw;}
 h3              {font-size: 2rem; font-weight: 700; line-height: 150%; margin: 0; width: 20vw;}
 h4              {font-size: 2rem; font-weight: 600; line-height: 150%; margin: 0; width: 30vw;}
-h5              {font-size: 1.8rem; font-weight: 600; line-height: 150%; margin: 0; width: 30vw;}
+h5              {font-size: 1.8rem; font-weight: 600; line-height: 150%; margin: 0; width: 25vw;}
 
 
 
@@ -183,15 +183,14 @@ input           {width: calc(100% - 200px);
                  background-color: #FF8BF6; color: white;
                 }
 .letter-exp     {
-                 padding-left: 100px; padding-right: 100px; padding-bottom: 30rem;
+                 padding-left: 50px; padding-right: 50px; padding-bottom: 30rem;
                  display: flex; justify-content: flex-start; flex-wrap: wrap;
-                 width: calc(100vw - 20rem);
                 }
 .letter-exp-block{padding: 10rem 0rem;
                  display: flex; flex-direction: column;
                  justify-content: space-between;
                 }
-.cards          {display: flex; gap: 1.5rem; margin: 5rem; height: 100%;}
+.cards          {display: flex; gap: 1.5rem; margin: 5rem;}
 .flip           {position: relative; perspective: 1100px; width: 12.5vw;}
 .card           {position: relative; transition: .4s; transform-style: preserve-3d; width: 12.5vw; height: 19.2vw;}
 .card-up        {padding-bottom: 80px; object-fit: contain; width: 12.5vw;}
