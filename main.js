@@ -78,8 +78,16 @@ addButton.addEventListener('click', () => {
 function loadComments() {
     storageLength = localStorage.length
     console.log(storageLength)
-    for (var i = storageLength - 5; i<storageLength; i++) {
-        addToGuest(localStorage.getItem(i));
+    if (storageLength <= 5) {
+        console.log('less then 5')
+        for (var i = 0; i<storageLength; i++) {
+            console.log(i, localStorage.getItem(i))
+            addToGuest(localStorage.getItem(i));
+        }
+    } else {
+        for (var i = storageLength - 5; i<storageLength; i++) {
+            addToGuest(localStorage.getItem(i));
+        }
     }
 }
 
@@ -248,6 +256,7 @@ function disassemble(hangul) {
 }
 
 
+// 슬라이드 화면 구현
 
 const greenSection = document.querySelector('.green-section');
 const pageList = document.querySelector('.page-list');
