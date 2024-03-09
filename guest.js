@@ -1,5 +1,7 @@
 // 새로고침시 위치 고정
 history.scrollRestoration = "auto";
+const guestCount = document.querySelectorAll('.stem').length;
+console.log("방명록 수:", guestCount);
 
 // 화면 실행시 기존 목록 불러오기
 window.onload = function() {
@@ -66,7 +68,7 @@ function addToGuest(text) {
     const guest = document.querySelector('.guest');
     const newListItem1 = document.createElement('div');
     const newListItem2 = document.createElement('div');
-    const newListItem3 = document.createElement('div')
+    const newListItem3 = document.createElement('div');
     newListItem1.classList.add('stem');
     newListItem2.classList.add('leaf');
     newListItem3.classList.add('guest')
